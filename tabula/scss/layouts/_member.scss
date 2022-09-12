@@ -1,0 +1,16 @@
+.member {
+  background-color: $color-violet-2;
+  padding-top: $pd-5;
+
+  // @include rsCardMB(col-lg-3, 5, 8);
+}
+
+//responsive
+@include responsiveMax("extra-large-down") {
+  .member {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    @include rsCardMB("col-lg-3", 1, 2);
+    @include rsCardMB("col-lg-3", 5, 8);
+  }
+}

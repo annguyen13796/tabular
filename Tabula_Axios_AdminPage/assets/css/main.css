@@ -1,0 +1,14 @@
+#userModal .modal-body .form-group p {
+    display: none;
+    font-size: 14px;
+    color: #f00;
+}
+
+#tblDanhSachNguoiDung tr td i {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#tblDanhSachNguoiDung tr td i:hover {
+    color: #28a745;
+}

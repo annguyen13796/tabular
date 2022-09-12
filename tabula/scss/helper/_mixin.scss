@@ -1,0 +1,81 @@
+@mixin styleText($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color !important;
+}
+
+@mixin styleButton($bg, $fs, $pd-y, $pd-x, $bd, $radius, $color) {
+  background-color: $bg;
+  font-size: $fs;
+  padding: $pd-y $pd-x;
+  border: $bd;
+  border-radius: $radius;
+  color: $color;
+}
+
+@mixin styleInput($radius, $bdcl, $h) {
+  border-radius: $radius;
+  outline: none;
+  padding: $pd-2 $pd-2 $pd-2 ($pd-6 - 2px);
+  border: 1px solid $bdcl;
+  height: $h;
+}
+
+@mixin background($bg, $size, $ps) {
+  background: url("..//image/#{$bg}");
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $ps;
+}
+
+@mixin rsCardMB($screen, $start, $end) {
+  @for $x from $start through $end {
+    .#{$screen}:nth-child(#{$x}) {
+      .card {
+        margin-bottom: unset;
+      }
+    }
+  }
+}
+
+@mixin responsiveMax($screen) {
+  @if (map-has-key($map: $breakpointsMax, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpointsMax,
+      $key: $screen,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "màn hình chưa khai báo";
+  }
+}
+
+@mixin responsiveMin($screen) {
+  @if (map-has-key($map: $breakpointsMin, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpointsMin,
+      $key: $screen,
+    );
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Undefined Screen Width!";
+  }
+}
+
+@mixin responsiveMax($screen) {
+  @if (map-has-key($map: $breakpointsMax, $key: $screen)) {
+    $value: map-get(
+      $map: $breakpointsMax,
+      $key: $screen,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Undefined Screen Width!";
+  }
+}

@@ -1,0 +1,73 @@
+//color
+$color-black-1: #181818;
+$color-black-2: #191919;
+$color-white-1: #ffffff;
+$color-violet-1: #b61984;
+$color-violet-2: #dcd1f3;
+
+//font size
+$fs-1: 13px;
+$fs-2: 0.9rem;
+$fs-3: 1.1rem;
+$fs-4: 3.8rem;
+$fs-5: 0.75rem;
+$fs-6: 1.55rem;
+$fs-7: 2.5rem;
+$fs-8: 15px;
+
+//font weight
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 600;
+$fw-4: 700;
+
+//line height
+$lh-1: 38px;
+$lh-2: 54px;
+$lh-3: 80px;
+$lh-4: 1;
+
+//Padding
+$pd-1: 8px;
+$pd-2: 12px;
+$pd-3: 20px;
+$pd-5: 30px;
+$pd-6: 44px;
+$pd-7: 60px;
+$pd-8: 100px;
+
+//Margin
+$mg-1: 6px;
+$mg-2: 15px;
+$mg-4: 20px;
+$mg-5: 30px;
+$mg-6: 40px;
+$mg-7: 50px;
+$mg-8: 60px;
+$mg-9: 80px;
+
+//border
+$bd-1: 1px;
+$bd-2: 2px;
+
+//border radius
+$radius-1: 10px;
+$radius-2: 50px;
+
+//reset padding of Bootstrap 4's col
+$cols: sm md lg xl;
+
+//break points
+$breakpointsMin: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
+
+$breakpointsMax: (
+  "extra-large-down": 1199.98px,
+  "large-down": 991.98px,
+  "medium-down": 767.98px,
+  "small-down": 575.98px,
+);

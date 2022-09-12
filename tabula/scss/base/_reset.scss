@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//reset html,body
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  @include styleText($fs-8, $fw-1, $color-black-1);
+
+  header,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-black-1;
+  }
+
+  section {
+    position: relative;
+    z-index: 5;
+
+    .bottom__background {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: unset;
+}
+
+.row {
+  margin-left: (-$mg-4);
+  margin-right: (-$mg-4);
+}
+
+//set new padding of B4's cols
+@for $size from 1 through 12 {
+  @each $col in $cols {
+    .col-#{$size},
+    .col-#{$col}-#{$size} {
+      padding-right: $pd-3;
+      padding-left: $pd-3;
+    }
+  }
+}
+
+@include responsiveMax("extra-large-down") {
+  .container {
+    max-width: unset;
+    padding-left: $pd-5;
+    padding-right: $pd-5;
+  }
+}
